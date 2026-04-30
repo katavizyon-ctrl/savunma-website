@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Savunma — Nuran Kurtuluş Atahan</title>
 <meta name="description" content="Savunma yoksa adalet de yoktur. Nuran Kurtuluş Atahan'ın yarım asırlık meslek hayatından Türkiye gerçeğine.">
@@ -92,6 +93,21 @@ nav {
 .hamburger span {
   display: block; width: 22px; height: 1.5px;
   background: var(--cream); transition: all 0.2s;
+}
+/* Hide menu by default on small screens */
+#navlinks {
+  display: none;
+}
+
+/* Show menu when 'open' class is added */
+#navlinks.open {
+  display: block;
+}
+
+/* Optional: style hamburger button */
+#hamburger {
+  cursor: pointer;
+  font-size: 24px;
 }
 
 /* ─── HERO ──────────────────────────────────── */
