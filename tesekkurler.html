@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajınız Alındı — SAVUNMA</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red: #C8102E;
+            --black: #0E0B0C;
+            --ink: #1C1618;
+            --off-white: #F5F0EC;
+            --warm-grey: #9A9088;
+            --line: rgba(200,16,46,0.2);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--off-white);
+            color: var(--ink);
+            font-family: 'Barlow', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topbar {
+            height: 52px;
+            background: var(--black);
+            border-bottom: 2px solid var(--red);
+            display: flex;
+            align-items: center;
+            padding: 0 48px;
+        }
+
+        .topbar a {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--off-white);
+            text-decoration: none;
+        }
+
+        .thanks {
+            flex: 1;
+            display: grid;
+            place-items: center;
+            padding: 80px 28px;
+        }
+
+        .thanks-card {
+            width: min(100%, 860px);
+            background: var(--black);
+            color: var(--off-white);
+            padding: 72px 68px;
+            border-top: 4px solid var(--red);
+            position: relative;
+        }
+
+        .thanks-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--red);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 42px;
+        }
+
+        .thanks-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(200,16,46,0.45);
+        }
+
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.92;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 34px;
+        }
+
+        p {
+            max-width: 620px;
+            font-size: clamp(1.15rem, 2vw, 1.45rem);
+            line-height: 1.75;
+            color: rgba(245,240,236,0.76);
+            margin-bottom: 42px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--red);
+            color: white;
+            text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 16px 28px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: #a80f24;
+            transform: translateY(-1px);
+        }
+
+        footer {
+            background: var(--black);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 14px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .footer-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--off-white);
+        }
+
+        .footer-copy {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.24);
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 700px) {
+            .topbar {
+                padding: 0 24px;
+            }
+
+            .topbar a {
+                font-size: 0.68rem;
+                letter-spacing: 3px;
+            }
+
+            .thanks {
+                padding: 52px 24px;
+            }
+
+            .thanks-card {
+                padding: 52px 28px;
+            }
+
+            .thanks-label {
+                letter-spacing: 4px;
+                margin-bottom: 34px;
+            }
+
+            p {
+                margin-bottom: 34px;
+            }
+
+            .back-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 26px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="topbar">
+        <a href="index.html">Savunma — Nuran Kurtuluş Atahan</a>
+    </nav>
+
+    <main class="thanks">
+        <section class="thanks-card">
+            <div class="thanks-label">İletişim</div>
+
+            <h1>Mesajınız<br>Alındı</h1>
+
+            <p>
+                <em>SAVUNMA</em>’ya gösterdiğiniz ilgi için teşekkür ederiz.
+                Mesajınız bize ulaştı; en kısa sürede geri dönüş yapılacaktır.
+            </p>
+
+            <a class="back-link" href="index.html">
+                Ana Sayfaya Dön
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">SAVUNMA</div>
+        <span class="footer-copy">© 2026 Doğan Yayınları — Tüm Hakları Saklıdır</span>
+    </footer>
+</body>
+</html>
